@@ -1,6 +1,10 @@
 body{
-    background-color: #06141c;
-    color: #2bc9c8;
+    background-image: url(/front-end-project/images/bitcoin.png);
+    color: #0f3750;
+    font-weight: bolder;
+    font-size: 30px;
+    background-size:cover
+ 
 }
 
 #div-login{
@@ -15,9 +19,8 @@ body{
     display: flex;
     flex-direction: column;
     align-self: center;
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
+    font-family:Arial;
+    text-align: center;
 
 }
 
@@ -32,5 +35,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: bold;
+    
     
 }
