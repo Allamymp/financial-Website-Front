@@ -1,0 +1,23 @@
+*{
+    
+}
+
+#div-login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+#form-login{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#button-login{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+}
