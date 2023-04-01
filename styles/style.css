@@ -4,34 +4,30 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+    min-height: 98vh;
     background: linear-gradient(to left, #666, #b5b5b5);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../images/wallapaper-finance.jpg);
+    
 }
 
 
 /* Login Card */
 .login-card {
     width: 450px;
-    background: rgba(255, 255, 255, .5);
     padding: 4rem;
     border-radius: 10px;
     position: relative;
-}
+    color: #fff;
+    /* Rectangle 1 */
+background: rgba(217, 217, 217, 0.1);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 30px;
 
-.login-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, .15);
-    transform: rotate(-6deg);
-    border-radius: 10px;
-    z-index: -1;
 }
-/* ---------- */
-
 /* Login Card Logo */
 .login-card-logo {
     margin-bottom: 2rem;
@@ -123,7 +119,8 @@ body {
 .login-card input[type="email"] {
     border: none;
     outline: none;
-    background: rgba(255, 255, 255, .3);
+    background: rgba(217, 217, 217, 0.1);
+backdrop-filter: blur(10px);
     padding: 1rem 1.5rem;
     padding-left: calc(1rem * 3.5);
     border-radius: 100px;
@@ -132,7 +129,8 @@ body {
 }
 
 .login-card input:focus {
-    background: white;
+    background: black;
+    color: white;
 }
 
 .login-card input[type="checkbox"] {
@@ -142,18 +140,22 @@ body {
 }
 
 .login-card button {
-    background: black;
-    color: white;
+    color: black;
     padding: 1rem;
     border-radius: 100px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: background .5s;
+    background: rgba(217, 217, 217, 0.1);
+backdrop-filter: blur(10px);
+border: none;
+
 }
 
 .login-card button:hover {
     background-color: rgba(0, 0, 0, 0.85);
+    color: white;
     cursor: pointer;
 }
 /* ---------- */
@@ -172,6 +174,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: calc(1rem * .8);
+    color: #FCC056;
 }
 
 .login-card-social-btns {
