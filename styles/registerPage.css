@@ -20,15 +20,10 @@
     align-items: center;
 }
 
-.login-card input[type="password"]{
-
-    font-size: 0.7rem;
-
-}
 .login-card-form{
     gap:1rem;
 }
 .login-card{
     padding:3rem;
-    
+
 }
