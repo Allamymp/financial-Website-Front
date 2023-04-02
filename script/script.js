@@ -16,26 +16,26 @@ function login(event) {
         alert('Login sucessful!');
       
       } else {
-        alert('Email or password incorretos!');
+        alert('Incorrect email or password!');
       }
     })
     .catch(error => console.error(error));
 }
 
-// Selecionando os elementos HTML
+// Selecting html elements
 const showPasswordButton = document.getElementById('showPassword');
 const passwordInput = document.getElementById('passwordForm');
 const confirmPasswordInput = document.getElementById('confirmPasswordForm');
 
-// Adicionando um evento de clique no botão "Show Password"
+// Adding a click event to the "Show Password" button
 showPasswordButton.addEventListener('click', () => {
-  // Verificando se o botão está marcado ou não
+  // Checking if the button is checked or not
   if (showPasswordButton.checked) {
-    // Se estiver marcado, tornar os inputs de senha visíveis
+    // If checked, make password entries visible
     passwordInput.type = 'text';
     confirmPasswordInput.type = 'text';
   } else {
-    // Caso contrário, ocultar a senha digitada
+    // Otherwise, hide the entered password
     passwordInput.type = 'password';
     confirmPasswordInput.type = 'password';
   }
