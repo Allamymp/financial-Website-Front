@@ -1,21 +1,20 @@
-const form = document.querySelector('form');
+const form = document.querySelector('#login-form');
 const btnLogin = document.querySelector('#btn-login');
 
-btnLogin.addEventListener('click', login);
+btnLogin.addEventListener('click', (event) => {
+  event.preventDefault();
+  login();
+});
 
-function login(event) {
-
-
+function login() {
   const email = document.querySelector('#emailForm').value;
   const password = document.querySelector('#passwordForm').value;
 
   fetch('./DB/registerTest.json')
     .then(response => response.json())
     .then(data => {
-      const { login, senha } = data;
-
-      if (email === login && password === senha) {
-        alert('Login successful!');
+      if (email === data.login && password === data.senha) {
+        alert('Login sucessful!');
       } else {
         alert('Incorrect email or password!');
       }
