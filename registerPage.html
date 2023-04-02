@@ -21,7 +21,7 @@
                     <h1> Register</h1>
                     <div>Create your access account </div>
                 </div>
-                <form class="login-card-form" onsubmit="register(); return false;">
+                <form class="login-card-form" id="registerForm">
                     <div class="form-item-name">
                         <input type="text" placeholder="First Name" id="firstName" 
                         autofocus required>
@@ -44,7 +44,7 @@
                             <label for="rememberMeCheckbox">Show Password</label>
                         </div>
                     </div>
-                    <button type="submit"  id="btn-register">Register</button>
+                    <button type="submit" id="btn-register">Register</button>
                 </form>
                 <div class="login-card-footer">
                     Have an account? <a href="index.html">Login</a>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <script src="DB/registerTest.json"></script>
-        <script  src="script/script.js"></script>
+        <script  src="script/scriptRegister.js"></script>
     </body>
 
     </html>
