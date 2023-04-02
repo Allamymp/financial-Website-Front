@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
       register(event);
     });
   });
+  showHidePassword();
   
   function register(event) {
     const firstName = document.getElementById("firstName").value;
@@ -20,4 +21,5 @@ document.addEventListener("DOMContentLoaded", function() {
    
     alert(`Name: ${user.name}, Email: ${user.email}, Password: ${user.password}`);
   }
+
   
