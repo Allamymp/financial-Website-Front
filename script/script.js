@@ -39,3 +39,54 @@ emailInput.addEventListener("input", () => {
         emailError.textContent = "";
     }
 });
+
+//caroussel 
+
+const carrossel = document.querySelector(".carrossel");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+const items = document.querySelectorAll(".item");
+const itemCount = items.length;
+const itemWidth = items[0].clientWidth;
+
+let currentIndex = 0;
+let position = 0;
+
+function updatePosition() {
+  carrossel.style.transform = `translateX(${position}px)`;
+}
+
+function updateButtons() {
+  if (position === 0) {
+    prevBtn.classList.add("disabled");
+  } else {
+    prevBtn.classList.remove("disabled");
+  }
+
+  if (position <= -(itemCount - 3) * itemWidth) {
+    nextBtn.classList.add("disabled");
+  } else {
+    nextBtn.classList.remove("disabled");
+  }
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    position += itemWidth;
+    updatePosition();
+    updateButtons();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < itemCount - 3) {
+    currentIndex++;
+    position -= itemWidth;
+    updatePosition();
+    updateButtons();
+  }
+});
+
+updateButtons();
