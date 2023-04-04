@@ -25,8 +25,37 @@ html {
 .carrossel {
   display: flex;
   
+  
 }
-
+.item:hover:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+  border-radius: 3px;
+  box-shadow: 10px 10px 5px black;
+}
+.item:hover:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+  border-radius: 3px;
+  box-shadow: 10px 10px 5px black;
+}
+.item:hover{
+  z-index: 2;
+  box-shadow:10px 10px 5px black;
+  transform: scale(1.2);
+  opacity:0.5;
+   
+}
 .item {
   display: flex;
   background-color: gray;
@@ -39,9 +68,7 @@ html {
   align-items: center;
   width: 228px;
   height: 203px;
-
-
-
+  border-radius: 3px;
 }
 
 .next:hover{
@@ -67,8 +94,8 @@ html {
   font-size: .85vw;
   cursor: pointer;
   position: fixed;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 90%;
+  border-top-left-radius:90%;
   width:4%;
   height: 203px;
   
