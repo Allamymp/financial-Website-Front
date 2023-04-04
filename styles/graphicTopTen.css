@@ -24,9 +24,10 @@ html {
 
 .carrossel {
   display: flex;
-  
-  
+
+
 }
+
 .item:hover:after {
   content: "";
   position: absolute;
@@ -38,6 +39,7 @@ html {
   border-radius: 3px;
   box-shadow: 10px 10px 5px black;
 }
+
 .item:hover:before {
   content: "";
   position: absolute;
@@ -49,13 +51,15 @@ html {
   border-radius: 3px;
   box-shadow: 10px 10px 5px black;
 }
-.item:hover{
+
+.item:hover {
   z-index: 2;
-  box-shadow:10px 10px 5px black;
+  box-shadow: 10px 10px 5px black;
   transform: scale(1.2);
-  opacity:0.5;
-   
+  opacity: 0.5;
+
 }
+
 .item {
   display: flex;
   background-color: gray;
@@ -71,13 +75,13 @@ html {
   border-radius: 3px;
 }
 
-.next:hover{
+.next:hover {
 
   opacity: 1;
 }
 
-.prev:hover{
-  
+.prev:hover {
+
   opacity: 1;
 }
 
@@ -95,18 +99,18 @@ html {
   cursor: pointer;
   position: fixed;
   border-bottom-left-radius: 90%;
-  border-top-left-radius:90%;
-  width:4%;
+  border-top-left-radius: 90%;
+  width: 4%;
   height: 203px;
-  
+
 }
 
-.prev{
+.prev {
   left: 0;
   opacity: 0;
 }
 
-.next{
+.next {
   right: 0;
   opacity: 0;
 }
