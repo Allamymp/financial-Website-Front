@@ -40,4 +40,3 @@ prevButton.addEventListener('click', () => {
   // Aplica a nova posição da barra de rolagem
   carrosselContainer.scrollLeft = nextScrollPosition;
 });
-
