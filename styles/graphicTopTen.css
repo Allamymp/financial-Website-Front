@@ -8,17 +8,20 @@ html {
   background-color: #1f2838;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  z-index: 1;
 
 }
 
 .carrossel-container {
   scroll-behavior: smooth;
   width: max-content;
+  height: 450px;
   display: flex;
-
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  overflow: hidden;
+  z-index: 1;
 
 }
 
@@ -27,6 +30,7 @@ html {
 
 
 }
+
 
 .item:hover:after {
   content: "";
@@ -54,9 +58,10 @@ html {
 
 .item:hover {
   z-index: 2;
-  box-shadow: 10px 10px 5px black;
-  transform: scale(1.2);
-  opacity: 0.5;
+  box-shadow: 10px 10px 10px 5px black;
+  transform: scale(1.9);
+  background-size: cover;
+
 
 }
 
@@ -73,6 +78,8 @@ html {
   width: 228px;
   height: 203px;
   border-radius: 3px;
+  background-image: url("../images/actionsImages/apple.png");
+  background-size: cover;
 }
 
 .next:hover {
@@ -98,8 +105,6 @@ html {
   font-size: .85vw;
   cursor: pointer;
   position: fixed;
-  border-bottom-left-radius: 90%;
-  border-top-left-radius: 90%;
   width: 4%;
   height: 203px;
 
