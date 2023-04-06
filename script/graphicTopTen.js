@@ -1,43 +1,37 @@
-const carrosselContainer = document.querySelector('.carrossel-container');
-const nextButton = document.querySelector('.next');
-const prevButton = document.querySelector('.prev');
-
-nextButton.addEventListener('click', () => {
-  // Calcula a posição atual da barra de rolagem
-  const currentScrollPosition = carrosselContainer.scrollLeft;
-
-  // Calcula a largura do carrossel e da div container
-  const carrosselWidth = carrosselContainer.scrollWidth;
-  const containerWidth = carrosselContainer.clientWidth;
-
-  // Calcula o tamanho de um item do carrossel
-  const itemWidth = document.querySelector('.item').offsetWidth;
-
-  // Calcula a posição final da barra de rolagem
-  const nextScrollPosition = Math.min(currentScrollPosition + itemWidth, carrosselWidth - containerWidth);
-
-  // Aplica a nova posição da barra de rolagem
-  carrosselContainer.scrollLeft = nextScrollPosition;
+$(document).ready(function(){
+  $('.carrossel').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+    nextArrow: '<button type="button" class="slick-next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  });
 });
-
-
-//rolar para esquerda
-
-prevButton.addEventListener('click', () => {
-  // Calcula a posição atual da barra de rolagem
-  const currentScrollPosition = carrosselContainer.scrollLeft;
-
-  // Calcula a largura do carrossel e da div container
-  const carrosselWidth = carrosselContainer.scrollWidth;
-  const containerWidth = carrosselContainer.clientWidth;
-
-  // Calcula o tamanho de um item do carrossel
-  const itemWidth = document.querySelector('.item').offsetWidth;
-
-  // Calcula a posição final da barra de rolagem
-  const nextScrollPosition = Math.max(currentScrollPosition - itemWidth, 0);
-
-  // Aplica a nova posição da barra de rolagem
-  carrosselContainer.scrollLeft = nextScrollPosition;
-});
-
