@@ -17,9 +17,14 @@ body,html{
   grid-column: 2;
   overflow: hidden;
   z-index: 2;
+  scroll-behavior: smooth;
  
 }
 
+.item:hover{
+  transform: scale(1.5);
+  box-shadow: 50 50 black;
+}
 .item {
   padding-right: 10px;
   flex:0 0 150px;
@@ -48,5 +53,9 @@ body,html{
   align-items: center;
   justify-content: center;
   align-self: center;
+  color: #FCC056;
+  background-color: black;
+  opacity: 70%;
+  border: none;
   
 }
