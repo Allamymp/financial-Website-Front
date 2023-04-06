@@ -14,7 +14,7 @@ html {
 
 .carrossel-container {
   scroll-behavior: smooth;
-  width: max-content;
+  width: 59%;
   height: 450px;
   display: flex;
   align-items: center;
