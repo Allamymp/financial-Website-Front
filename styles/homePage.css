@@ -3,6 +3,7 @@
 
 body,html{
   display: flex;
+  background-color: color.1;
 }
 .carrossel-container {
   display: grid;
