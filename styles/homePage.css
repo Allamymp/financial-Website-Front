@@ -2,12 +2,72 @@
 @import url('colorPalette.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Poppins:wght@400;600&display=swap');
 
-html, body{
+html,
+body {
+    font-family: 'Inter', sans-serif;
     background-color: var(--color4);
-    
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin: 32px;
+    overflow: hidden;
+ 
 }
 
-.header-list:nth-child(1){
-    font-family: 'Inter', sans-serif;
+.header-list{
     color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-name{
+    font-size: larger;
+}
+#header-search-bar ul{
+    display: flex;
+    align-items: center;
+    background-color: var(--color7);
+    border-radius: 10px;
+    padding-left: 5px;
+}
+#header-search-bar input[type='text'] {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: medium;
+    width: 15vw;
+    
+  }
+ #header-search-bar .material-icons{
+    font-size: smaller;
+    text-align: center;
+    padding-top: 4px;
+ }
+
+ #header-buttons ul{
+    display: flex;
+    align-items: center;
+    
+ }
+
+ #header-buttons ul li{
+    margin-right: 6px;
+    font-size: 30px;
+ }
+
+ #header-buttons #image-profile{
+
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Terry_Crews_by_Gage_Skidmore_5.jpg/800px-Terry_Crews_by_Gage_Skidmore_5.jpg');
+    border:solid 1px ;
+    border-color: var(--color2);
 }
