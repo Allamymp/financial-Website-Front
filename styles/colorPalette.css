@@ -1,23 +1,20 @@
-:root{
+:root {
 
---color1: #212434; /*ebony clay*/
+    --color1: #2595FD;
 
+    --color2: #4EA9FD;
 
---color2: #3f446f;/* east bay*/
+    --color3: #13151B;
 
+    --color4: #21222D;
 
---color3: #FFD082;/*glandis*/
+    --color5: #5F606D;
 
-
---color4: #bbb; /*silver*/
-
-
---color5: #ff8282; /* vivid tangerine*/
+    --color6: #171821;
 
 
---color6:#FCC056; /* yellow font */
+    --color7: #43444D;
 
 
-
---color7: #d7d7d7; /*alto*/
+    --color8: #9293A0;
 }
