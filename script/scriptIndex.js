@@ -15,6 +15,8 @@ function login() {
     .then(data => {
       if (email === data.login && password === data.senha) {
         alert('Login sucessful!');
+        window.location.replace('homePage.html');
+
       } else {
         alert('Incorrect email or password!');
       }
