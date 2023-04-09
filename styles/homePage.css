@@ -2,100 +2,163 @@
 @import url('colorPalette.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Poppins:wght@400;600&display=swap');
 
+/* 
+maximo img: 1809
+gap 32 : 27
+colum left img: 67
+gap-42 = 31
+div left 212
+gap 20 = 16
+
+
+max nav width: 1810
+
+
+
+*/ 
+*{
+    margin: 0;
+    padding: 0;
+}
 html,
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--color6);
     margin: 0;
     padding: 0;
+    color: var(--color6);
+    height:100%;
+    width: 100%;
 }
-header{
-    margin: 32px;
-    overflow: hidden;
- 
-}
+.container{
+    display: grid;
+    grid-template-columns: auto 1fr;
 
-
-
-.header-list{
-    color: var(--color8);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
 
-#header-name{
-    font-size: larger;
+.left-grid{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 105px 105px;
+    column-gap: 38px;
+    height: 100%;
     background-color: var(--color3);
-    z-index: 1;
+    width: max-content;
+    padding: 38px;
+
+}
+.left-grid h2{
+    grid-column: 1/span 2;
     color: white;
-   
 }
-#header-search-bar ul{
+.left-grid > *{
+    border:1px solid white;
+}
+.left-grid h1{
+    grid-column: 2;
+    color:white;
+}
+
+.central-grid{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 95px);
+    column-gap: 22px;
+    padding: 48px;
+    padding-top: 38px;
+    background-color: var(--color6);
+    margin:0;
+    width: 100%;
+    max-width: 100%;
+
+}
+.central-grid > *{
+    border:1px solid white;
+    
+}
+
+
+#search-bar{
     display: flex;
-    align-items: center;
-    background-color: var(--color4);
+    grid-column: 1/span 6;
+    width: fit-content;
     border-radius: 10px;
-    padding-left: 5px;
-    z-index: 1;
-}
-#header-search-bar input[type='text'] {
-    background-color: transparent;
+    background-color: var(--color7);
+    height: 31px;
     border: none;
-    color: var(--color8);
-    font-size: medium;
-    width: 200px;
-    z-index: 1;
+    margin-top: 5px;    
+
     
-  }
- #header-search-bar .material-icons{
-    font-size: medium;
-    text-align: center;
-    padding-top: 4px;
+}
+#search-bar .material-icons{
+    font-size: 25px;
     color: var(--color5);
- }
-
- #header-buttons ul{
-    display: flex;
-    align-items: center;
+    padding-left: 5px;
+    padding-top: 2px;
     
- }
-
- #header-buttons ul li{
-    margin-right: 6px;
-    font-size: 30px;
-    background-color: var(--color4);
-    border-radius: 25px;
-    height: 50px;
-    width: 50px;
+}
+#search-bar input{
+    width:30vw;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    background-color: var(--color7);
+    border: none;
+    color:var(--color5);
+    border-style: none;
+    
+}
+#light-mode{
+    grid-column: 10;
+    display: flex;
+    justify-content: right;
     text-align: center;
-    align-content: center;
-    padding-top: 7px;
-  
- }
-
- #header-buttons #image-profile{
-
+    color: var(--color5)
+}
+#light-mode span{
+    font-size: 40px;
+    border-radius: 50%;
+    background-color: var(--color7);
     width: 50px;
     height: 50px;
+    padding-top: 3px;
+    margin-right: -40px;
+    margin-top: 2px;
+
+}
+#notifications{
+    grid-column: 11;
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+    text-align: center;
+}
+#notifications span{
+    font-size: 40px;
+    border-radius: 50%;
+    background-color: var(--color7);
+    width: 50px;
+    height: 50px;
+    color: var(--color5);
+    margin-top: 2px;
+
+}
+#image-profile{
+    grid-column: 12;   
+    display: flex;
+    justify-content: right;
+
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-size: cover;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Terry_Crews_by_Gage_Skidmore_5.jpg/800px-Terry_Crews_by_Gage_Skidmore_5.jpg');
-    border:solid 1px ;
+    border:solid 3px ;
     border-color: var(--color2);
 }
-.left-bar{
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 220px; /* largura desejada */
-    background-color: var(--color3);
-   
 
-  }
