@@ -5,9 +5,9 @@ const itemWidth = (document.querySelector('.item').offsetWidth);
 
 function rolarCarrossel(direcao) {
   if (direcao === 'prev') {
-    carrossel.scrollLeft -= itemWidth -2;
+    carrossel.scrollLeft -= itemWidth;
   } else if (direcao === 'next') {
-    carrossel.scrollLeft += itemWidth - 2;
+    carrossel.scrollLeft += itemWidth;
   }
 }
 

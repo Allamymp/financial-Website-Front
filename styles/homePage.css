@@ -32,7 +32,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: auto 1fr;
-
+    grid-template-rows: 100px auto;
     height: 100%;
     max-height: 100%;
     width: 100%;
@@ -222,3 +222,71 @@ button {
     padding: 0;
     cursor: pointer;
   }
+
+.carousel{
+    grid-column: 1/span 2;
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+}
+.carousel h3{
+    color: white;
+    margin-bottom: 30px;
+}
+  .carrossel-container {
+    display: grid;
+    grid-template-columns: auto 750px auto;
+    align-items: center;
+  
+  }
+  
+  .carrossel {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
+    overflow: hidden;
+    z-index: 2;
+    scroll-behavior: smooth;
+   
+  }
+  
+  .item:hover{
+    transform: scale(1.5);
+    box-shadow: 50 50 black;
+  }
+  .item {
+    padding-right: 10px;
+    flex:0 0 150px;
+  }
+  
+  .next {
+    grid-column: 3;
+    margin-left: -30px;
+    z-index: 3;
+  }
+  
+  .prev {
+    grid-column:1 ;
+    margin-right: -20px;
+    z-index: 3;
+  }
+  
+  .next,
+  .prev {
+    font-family: 'Material Symbols Rounded', sans-serif;
+    border-radius: 50%;
+    background-color: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    color: var(--color2);
+    background-color: var(--color4
+    );
+    opacity: 70%;
+    border: none;
+    
+  }
+  
